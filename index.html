@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+	author: ryan carswell	
+	date:   2-jul-2021
+	notes:	ryan carswell comp 2132 final project home page
+    -->
+
+<head>
+    <title>COMP 2132 Final Project</title>
+    <meta charset="utf-8">
+
+    <!-- for chrome to properly handle adjusting with in inspector mode for media queries -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">   
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="icons/site.webmanifest">
+    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <script src="scripts/collapsible-menu.js" defer="defer"></script>
+    <script src="scripts/dice-game.js" defer="defer"></script>
+    <script src="scripts/finalproject.js" defer="defer"></script>
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <p>Ryan Carswell</p>
+            <nav>
+                <button type="button" class="collapsible">Menu</button>
+                <ul class="nav-options">
+                    <li><a href="#">Home</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1>COMP 2132 Final Project</h1>
+            
+            <p id="inspiration">Music by Toby Fox, aesthetic inspired by Undertale</p>
+
+            <div id="game-container">
+
+                <div id="welcome">
+                    <p id="welcome-message">WELCOME TO DICE!</p>
+                    <div id="rules">
+                        <h3>The Rules for dice are:</h3>
+                        <ol>
+                            <li>There will be three rounds</li>
+                            <li>Each round, you and the computer will face off by rolling two dice each</li>
+                            <li>Each round you will earn a score based on your dice roll:
+                                <ul>
+                                    <li>If either of your dice are a 1, your score for that round is 0</li>
+                                    <li>If you roll two of the same number (except 1), your score for that round is twice the sum of the dice values</li>
+                                    <li>Otherwise, your score for that round is the sum of the two dice values</li>
+                                </ul>
+                            </li>
+                            <li>After three rounds, the player with the highest total score wins!</li>
+                        </ol>
+                    </div>
+                    <button id="begin-btn">Begin!</button>
+                </div>
+                
+                <div id="active-game-container">
+                    <div id="player-title">
+                        <p>You</p>
+                        <div id="player-stats"></div>
+                    </div>
+                    <div id="round-tracker">
+                        <p>Round:1</p>
+                    </div>
+                    <div id="computer-title">
+                        <p>Computer</p>
+                        <div id="computer-stats"></div>
+                    </div>
+                    <div id="player-image-container">
+                        <img src='images/dice.png' alt="dice cup">
+                    </div>
+                    <button id="play-btn">Click to Roll</button>
+                    <div id="computer-image-container">
+                        <img src='images/dice.png' alt="dice cup">
+                    </div>
+                    <div id="game-summary">
+                        <p>Get ready for the most exhilirating showdown you've had this past minute!</p>
+                    </div>
+                    <input type="image" id="mute" src="images/unmuted_icon.svg" alt="mute-toggle"><audio id="background-music" src="audio/death_by_glamour.mp3"></audio>
+                </div>
+
+            </div>
+            
+        </main>
+
+        <footer>
+            <div class="social-media">
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/ryancarswell/" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn logo"></a></li>
+                    <li><a href="https://github.com/chiffx" target="_blank"><img src="images/github.svg" alt="Github logo"></a></li>
+                    <li><img src="images/twitter.svg" alt="Twitter logo"></li>
+                    <li><img src="images/youtube.svg" alt="YouTube logo"></li>
+                </ul>
+            </div>
+            <ul class="credits">
+                <li>Ryan Carswell</li>
+                <li>2021</li>
+                <li>COMP 2132</li>
+            </ul>
+        </footer>
+    </div>
+</body>
+
+</html>
