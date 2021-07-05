@@ -438,6 +438,7 @@ id selectors
   background-color: white;
   border: 3px solid white;
   font-family: "Press Start 2P", cursive;
+  border-radius: 10px;
   line-height: 1.7em;
 }
 #play-btn:hover {

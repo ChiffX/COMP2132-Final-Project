@@ -14,6 +14,14 @@ $major-container-border-radius: 30px;
 $game-font: 'Press Start 2P', cursive;
 $white-game-border: 3px solid white; 
 
+@mixin rounded-button($text-color, $background-color, $button-border, $font, $border-radius){
+    color: $text-color;
+    background-color: $background-color;
+    border: $button-border;
+    font-family: $font;
+    border-radius: $border-radius;
+}
+
 /*
 HTML selectors
 */
@@ -476,12 +484,9 @@ id selectors
     align-self: center;
     min-width: 50%;
     min-height: 30%;
+    
+    @include rounded-button(black, white, $white-game-border, $game-font, 10px);
 
-    color: black;
-    background-color: white;
-    border: $white-game-border;
-
-    font-family: $game-font;
     line-height: 1.7em;
 
     &:hover{
@@ -656,7 +661,7 @@ Media queries
     a[href^="http"]:after{
 		content:" URL: (" attr(href) ") ";		
 	}
-    
+
 	/* hide certain portions of the page */
 	header, nav, aside, footer{
 		display:none;
