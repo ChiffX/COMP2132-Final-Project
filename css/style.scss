@@ -31,7 +31,6 @@ html {
 
 body{
     margin:8px;
-
 }
 
 a{
@@ -83,7 +82,6 @@ p{
 h1{
     font-size:1.5em;
     font-weight:bold;
-
 
     padding: $heading-padding;
     margin: $heading-margin;
@@ -153,8 +151,6 @@ nav{
         text-align:left;
         padding-left:0px;
     }
-
-
 }
 
 section{
@@ -308,11 +304,9 @@ class selectors
 
 .credits{
     color:grey;
-
     display:flex;
     list-style: none;
     justify-content:space-between;
-
     padding:15px 10px 0 10px;
 }
 
@@ -592,11 +586,13 @@ Media queries
         max-height:35vh;
         align-self:center;
     }
+
     #qol{
         display:flex;
         flex: 1 1;
         justify-content: space-between;
     }
+
     .screenshot-link{
         align-self:center;
 
@@ -660,17 +656,21 @@ Media queries
     a[href^="http"]:after{
 		content:" URL: (" attr(href) ") ";		
 	}
+    
 	/* hide certain portions of the page */
 	header, nav, aside, footer{
 		display:none;
 	}
+
 	/* break pages across headings */
 	h1, h2, h3, h4, h5, h6{
 		page-break-after:avoid;
 	}
+
     p{
         page-break-inside:avoid;
     }
+
 	/* 
 	start new page with each new section
 	(but dont page break with the first section)
